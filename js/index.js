@@ -1,7 +1,7 @@
 quotes = [
-    '"Without big data, you are blind and deaf and in the middle of a freeway." - Geoffrey Moore"',
+    '"Without big data, you are blind and deaf and in the middle of a freeway." - Geoffrey Moore',
     '"In God we trust, all others bring data." - W Edwards Deming',
-    '"Data is the new oil." - Clive Humby"',
+    '"Data is the new oil." - Clive Humby',
     '"No great marketing decisions have ever been made on qualitative data." - John Sculley',
     '"Torture the data, and it will confess to anything." - Ronald Coase',
     '"With data collection, \'the sooner the better\' is always the best answer." - Marissa Mayer',
