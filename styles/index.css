@@ -16,10 +16,7 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-#snow_falling {
-    z-index: 9999;
-    position: relative;
-}
+
   
 #header {
     background: rgb(54, 53, 53);
@@ -116,12 +113,14 @@ a {
 }
 
 
-.team_snow{
+
+
+.visual{
     z-index: 9999;
     position: relative;
 }
 
-.visual{
+.team_particles {
     z-index: 9999;
     position: relative;
 }

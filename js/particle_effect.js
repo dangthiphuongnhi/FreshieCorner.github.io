@@ -11,7 +11,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 /* Otherwise just put the config content (json): */
 
-particlesJS('snow_fall',
+particlesJS('particle_effects',
   
   {
     "particles": {
