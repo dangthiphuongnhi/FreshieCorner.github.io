@@ -1,0 +1,58 @@
+.boardMembers {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.advisor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advisorMember {
+    max-width: 340px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: transparent;
+    padding: 1rem;
+    margin: 5px;
+    color: beige;
+    cursor: default;
+}
+
+.about {
+    font-size: small;
+}
+
+.title {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.name {
+    font-style: bold;
+}
+
+.profileImage {
+    object-fit: contain;
+    width: 220px;
+    height: 220px;
+}
+
+
+
+
+.visual {
+    z-index: 9999;
+    position: relative;
+}
+
+.team_particles {
+    z-index: 9999;
+    position: relative;
+}

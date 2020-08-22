@@ -1,0 +1,7 @@
+video {
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+}
