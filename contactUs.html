@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,22 +6,116 @@
     <title>DS-UT</title>
     <link rel="stylesheet" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/nav.css"> 
-<body>
-    <div id="header"></div>
-    <main>
-        <div class="parent">
-            <div class="child">
-                <div class="intro">
-                    <p class="shortInfo">Please do note that  Data Science UToledo is a student organization and not a university department.</p>
-                    <br>
-                    Email: <a href="mailto:datasciencetutoledo@gmail.com" class="emailLink">datasciencetutoledo@gmail.com</a><br>
-                </div>
-            </div>
-        </div>
-    </main>
-    <div id="footer"></div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/contactUsStyle.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/headerFooterLoader.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function sendEmail() {
+            var name = document.getElementById("name").value;
+            var number = document.getElementById("rocket-number").value;
+            var mailBody = document.getElementById("myText").value;
+
+            if (name == "" || mailBody == "") {
+
+            } else {
+                var mailContent = "My name is " + name + " and my email is " + number + ". Message: " + mailBody;
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "myhomefeedback@gmail.com",
+                    Password: "#Lehoangnhatduy248!!#",
+                    From: "myhomefeedback@gmail.com",
+                    To: "utoledo.datascience@gmail.com",
+                    Subject: "Message From Contact Us Page",
+                    Body: mailContent
+                }).then(
+                );
+
+                document.getElementById("name").value = " ";
+                document.getElementById("rocket-number").value = " ";
+                document.getElementById("myText").value = " ";
+            }
+        }
+
+        $(document).ready(function () {
+            $(".send-btn").click(function () {
+                if (document.getElementById("name").value == "" || document.getElementById("myText").value == "") {
+                    $(".alert-error").toggleClass("expand");
+                    $(".alert-error").fadeOut(4000, function () {
+                        $(this).remove();
+                    });
+                } else {
+                    $(".alert-success").toggleClass("expand");
+                    $(".alert-success").fadeOut(4000, function () {
+                        $(this).remove();
+                    });
+                }
+            });
+        });
+    </script>
+
+    <div id="header">
+        <button type="button" class="navButton">🞬</button>
+        <ul>
+            <li>
+                <a href="index.html" class="hvr-grow navbarLink">Home</a>
+            </li>
+            <li>
+                <a href="projects.html" class="hvr-grow navbarLink">Projects</a>
+            </li>
+            <li>
+                <a href="team.html" class="hvr-grow navbarLink">Our Team</a>
+            </li>
+            <li>
+                <a href="events.html" class="hvr-grow navbarLink">Events</a>
+            </li>
+            <li>
+                <a href="contactUs.html" class="hvr-grow navbarLink">Contact Us</a>
+            </li>
+        </ul>
+
+        <script src="js/navbar.js"></script>
+    </div>
+
+    <main>
+        <div class="wrapper">
+            <!--alert messages start-->
+            <div id="success" class="alert-success">
+                <span id="sucess">Message Sent! Thank you for contacting us.</span>
+            </div>
+            <div id="error" class="alert-error">
+                <span>Your name or your message cannot be blank! Please try again.</span>
+            </div>
+            <!--alert messages end-->
+            <!--contact page start-->
+            <div class="contact-section">
+                <div class="contact-info">
+                    <div><i class="fas fa-map-marker-alt"></i>2801 Bancroft St, Toledo, OH 43606</div>
+                    <div><i class="fas fa-envelope"></i>datasciencetutoledo@gmail.com</div>
+                    <div><i class="fas fa-phone"></i>(567) 694-1943</div>
+                    <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+                </div>
+                <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <form class="contact" method="post">
+                        <input type="text" name="name" class="text-box" placeholder="Your Full Name" id="name" required />
+                        <input type="text" name="number" class="text-box" placeholder="Your Email" id="rocket-number" />
+                        <textarea name="message" rows="5" placeholder="Your Message" id="myText" required></textarea>
+                        <input type="button" name="submit" class="send-btn" value="Send" onclick="sendEmail()" />
+                    </form>
+                </div>
+            </div>
+            <!--contact page end-->
+        </div>
+    </main>
+
+    <div id="footer">
+        <footer>© Copyright Data Science UToledo.</footer>
+    </div>
 </body>
 </html>
