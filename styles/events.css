@@ -1,4 +1,11 @@
-.intro{
+
+
+.event_particles{
+    z-index: 9999;
+    position: relative;
+}
+
+.intro p {
     margin-top: 300px;
     margin-left: 600px;
 }

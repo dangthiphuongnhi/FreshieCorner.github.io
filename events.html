@@ -8,9 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/headerFooterLoader.js"></script>
-    <script type="text/javascript" src="js/particle_effect/particles.js"></script>
-    <script type="text/javascript" src="js/particle_effect/particle_effect.js"></script>
+    <script src="js/header_footer/headerFooterLoader.js"></script>
 
     <!--Css link-->
     <link rel="stylesheet" href="styles/nav.css">
@@ -20,13 +18,34 @@
 
 </head>
 <body>
-    <div id="header"></div>
+    <div id="header">
+        <button type="button" class="navButton">🞬</button>
+        <ul>
+            <li>
+                <a href="index.html" class="hvr-grow navbarLink">Home</a>
+            </li>
+            <li>
+                <a href="projects.html" class="hvr-grow navbarLink">Projects</a>
+            </li>
+            <li>
+                <a href="team.html" class="hvr-grow navbarLink">Our Team</a>
+            </li>
+            <li>
+                <a href="events.html" class="hvr-grow navbarLink">Events</a>
+            </li>
+            <li>
+                <a href="contactUs.html" class="hvr-grow navbarLink">Contact Us</a>
+            </li>
+        </ul>
+
+        <script src="js/navbar.js"></script>
+    </div>
     <main>
 
         <div class="parent">
             <div class="child">
                 <div class="intro">
-                    Events coming soon !!!
+                    <p>Events coming soon !!!</p>
                 </div>
             </div>
         </div>
@@ -39,7 +58,9 @@
 
 
     </main>
-    <div id="footer"></div>
+    <div id="footer">
+        <footer>© Copyright Data Science UToledo.</footer>
+    </div>
     
 </body>
 </html>
