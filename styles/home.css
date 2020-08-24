@@ -1,7 +1,12 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90.3vh;
+}
+
 video {
     height: 100%;
-    width: 177.77777778vh; /* 100 * 16 / 9 */
-    min-width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
+    width: 100%; /*177.77777778vh; */ /* 100 * 16 / 9 */
+    object-fit: cover;
 }

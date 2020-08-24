@@ -56,4 +56,5 @@
 .team_particles {
     z-index: 9999;
     position: relative;
+    display: flex;
 }
